@@ -1,10 +1,6 @@
 'use strict'
 
-const ghPagesList = [
-  'index.html',
-  'favicon.ico',
-  'public'
-].join(' ')
+const ghPagesList = ['dist/']
 
 module.exports = {
   'git-is-clean': {
@@ -26,14 +22,14 @@ module.exports = {
       'git branch -D gh-pages || echo "so not removed"',
       'git checkout --orphan gh-pages',
       'git rm --cached \'*\''
+      'ember build --environment=production'
     ].join(' && ')
   },
   'deploy-publish': {
     command: [
-      'touch .nojekyll',
-      `git add --force .nojekyll ${ghPagesList}`,
+      `git add --force dist/`,
       'git commit -m "deploy task"',
-      'git push origin gh-pages --force',
+      'git subtree push --prefix dist origin gh-pages --force-with-lease',
       'git clean -x -d --force --exclude=node_modules',
       'git checkout master'
     ].join(' && ')
