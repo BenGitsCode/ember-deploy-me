@@ -1,10 +1,6 @@
 'use strict'
 
-const ghPagesList = [
-  'index.html',
-  'favicon.ico',
-  'public'
-].join(' ')
+const ghPagesList = ['dist/']
 
 module.exports = {
   'git-is-clean': {
