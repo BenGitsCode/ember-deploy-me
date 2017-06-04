@@ -27,8 +27,7 @@ module.exports = {
   },
   'deploy-publish': {
     command: [
-      'touch .nojekyll',
-      `git add --force .nojekyll ${ghPagesList}`,
+      `git add --force dist/`,
       'git commit -m "deploy task"',
       'git push origin gh-pages --force',
       'git clean -x -d --force --exclude=node_modules',
