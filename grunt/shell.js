@@ -35,6 +35,7 @@ module.exports = {
       'git clean -x -d --force --exclude=node_modules',
       'git checkout master'
     ].join(' && ')
+    },
   'deploy-cleanup': {
     command: [
       'git clean -x -d --force --exclude=node_modules',
