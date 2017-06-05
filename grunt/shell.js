@@ -45,6 +45,9 @@ module.exports = {
   },
   'deploy-publish-6': {
     command: 'git checkout master'
+  },
+  'deploy-publish-6': {
+    command: 'git checkout master'
   }
   'deploy-cleanup': {
     command: [
