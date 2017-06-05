@@ -25,7 +25,7 @@ module.exports = {
       'ember build --environment=production'
     ].join(' && ')
   },
-   'deploy-debug': {
+   'deploy-dist': {
     command: 'git add --force dist/'
   },
   'deploy-publish': {
@@ -35,5 +35,11 @@ module.exports = {
       'git clean -x -d --force --exclude=node_modules',
       'git checkout master'
     ].join(' && ')
+  'deploy-cleanup': {
+    command: [
+      'git clean -x -d --force --exclude=node_modules',
+      'git checkout master'
+    ].join(' && ')
+
   }
 }
