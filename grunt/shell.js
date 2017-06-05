@@ -25,23 +25,28 @@ module.exports = {
       'ember build --environment=production'
     ].join(' && ')
   },
-   'deploy-dist': {
+  'deploy-dist': {
     command: 'git add --force dist/'
   },
-  'deploy-publish': {
-    command: [
-      'git commit -m "deploy task"',
-      'git push origin :gh-pages',
-      'git subtree push --prefix dist origin gh-pages',
-      'git clean -x -d --force --exclude=node_modules',
-      'git checkout master'
-    ].join(' && ')
-    },
+  'deploy-publish-1': {
+    command:'git commit -m "deploy task"'
+  },
+  'deploy-publish-2': {
+    command: 'git subtree push --prefix dist origin gh-pages'
+  },
+  'deploy-publish-3': {
+    command: 'git push origin :gh-pages'
+  },
+  'deploy-publish-4': {
+    command: 'git subtree push --prefix dist origin gh-pages'
+  },
+  'deploy-publish-5': {
+    command: 'git clean -x -d --force --exclude=node_modules'
+    'git checkout master'
+  },
   'deploy-cleanup': {
     command: [
       'git clean -x -d --force --exclude=node_modules',
       'git checkout master'
-    ].join(' && ')
-
   }
 }

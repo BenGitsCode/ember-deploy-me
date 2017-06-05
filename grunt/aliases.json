@@ -7,8 +7,11 @@
     "shell:git-push-master",
     "shell:deploy-prepare",
     "shell:deploy-dist",
-    "shell:deploy-publish",
-    "shell:deploy-publish"
+    "shell:deploy-publish-1",
+    "shell:deploy-publish-2",
+    "shell:deploy-publish-3",
+    "shell:deploy-publish-4",
+    "shell:deploy-publish-5"
   ],
   "reformat": ["jscs:write"]
 }
