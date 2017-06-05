@@ -20,7 +20,7 @@ module.exports = {
   'deploy-prepare': {
     command: [
       'git branch -D gh-pages || echo "so not removed"',
-      'git checkout --orphan gh-pages',
+      'git checkout --branch --orphan gh-pages',
       'git rm --cached \'*\'',
       'ember build --environment=production'
     ].join(' && ')
@@ -31,8 +31,14 @@ module.exports = {
   'deploy-publish-1': {
     command:'git commit -m "deploy task"'
   },
+  // 'deploy-publish-2': {
+  //   command: 'git subtree push --prefix dist origin gh-pages'
+  // },
+  // 'deploy-publish-3': {
+  //   command: 'git push origin :gh-pages'
+  // },
   'deploy-publish-2': {
-    command: 'git subtree push --prefix dist origin gh-pages'
+    command: 'git subtree split --prefix dist -b gh-pages'
   },
   'deploy-publish-3': {
     command: 'git push origin :gh-pages'
