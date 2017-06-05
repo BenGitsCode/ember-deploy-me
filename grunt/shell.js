@@ -42,8 +42,10 @@ module.exports = {
   },
   'deploy-publish-5': {
     command: 'git clean -x -d --force --exclude=node_modules'
-    'git checkout master'
   },
+  'deploy-publish-6': {
+    command: 'git checkout master'
+  }
   'deploy-cleanup': {
     command: [
       'git clean -x -d --force --exclude=node_modules',
