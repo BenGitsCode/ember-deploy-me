@@ -11,7 +11,8 @@
     "shell:deploy-publish-2",
     "shell:deploy-publish-3",
     "shell:deploy-publish-4",
-    "shell:deploy-publish-5"
+    "shell:deploy-publish-5",
+    "shell:deploy-publish-6"
   ],
   "reformat": ["jscs:write"]
 }
