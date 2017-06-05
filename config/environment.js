@@ -3,7 +3,7 @@
 module.exports = function (environment) {
   'use strict';
   const ENV = {
-    modulePrefix: 'ga-wdi-boston.ember-deployed',
+    modulePrefix: 'ember-shipit',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -49,7 +49,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/ga-wdi-boston.ember-deployed';
+    ENV.rootURL = '/ember-shipit';
     ENV.locationType = 'hash';
   }
 
