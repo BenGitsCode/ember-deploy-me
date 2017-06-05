@@ -6,7 +6,8 @@
     "shell:git-checkout-master",
     "shell:git-push-master",
     "shell:deploy-prepare",
-    "shell:deploy-debug",
+    "shell:deploy-dist",
+    "shell:deploy-publish",
     "shell:deploy-publish"
   ],
   "reformat": ["jscs:write"]
