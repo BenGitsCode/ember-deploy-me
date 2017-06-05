@@ -31,6 +31,7 @@ module.exports = {
   'deploy-publish': {
     command: [
       'git commit -m "deploy task"',
+      'git push origin :gh-pages',
       'git subtree push --prefix dist origin gh-pages',
       'git clean -x -d --force --exclude=node_modules',
       'git checkout master'
