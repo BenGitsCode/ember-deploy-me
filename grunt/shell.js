@@ -26,7 +26,9 @@ module.exports = {
     ].join(' && ')
   },
   'deploy-dist': {
-    command: 'git add --force dist/'
+    command: ['git add --force dist/',
+    'git commit -m "deploy task"'
+    ].join(' ')
   },
   'deploy-publish-1': {
     command:'git commit -m "deploy task"'
