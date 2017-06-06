@@ -26,29 +26,17 @@ module.exports = {
     ].join(' && ')
   },
   'deploy-dist': {
-    command: ['git add --force dist/',
+    command: [
+    'git add --force dist/',
     'git commit -m "deploy task"'
     ].join(' ')
   },
-  'deploy-publish-1': {
-    command:'git commit -m "deploy task"'
-  },
-  'deploy-publish-2': {
-    command: 'git subtree push --prefix dist origin gh-pages'
-  },
-  'deploy-publish-3': {
-    command: 'git push origin :gh-pages'
-  },
-  'deploy-publish-4': {
-    command: 'git subtree push --prefix dist origin gh-pages'
-  },
-  'deploy-publish-5': {
-    command: 'git clean -x -d --force --exclude=node_modules'
-  },
-  'deploy-publish-6': {
-    command: 'git checkout master'
-  },
-  'deploy-cleanup': {
-    command: 'git clean -x -d --force --exclude=node_modules'
-  }
+  'deploy-publish': {
+    command: [
+     'git push origin :gh-pages',
+     'git subtree push --prefix dist origin gh-pages',
+     'git clean -x -d --force --exclude=node_modules'
+     'git checkout master'
+    ].join(' ')
+   }
 }
