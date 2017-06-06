@@ -29,7 +29,7 @@ module.exports = {
     command: [
     'git add --force dist/',
     'git commit -m "deploy task"'
-    ].join(' ')
+  ].join(' && ')
   },
   'deploy-publish': {
     command: [
@@ -37,6 +37,6 @@ module.exports = {
      'git subtree push --prefix dist origin gh-pages',
      'git clean -x -d --force --exclude=node_modules',
      'git checkout master'
-    ].join(' ')
+   ].join(' && ')
    }
 }
