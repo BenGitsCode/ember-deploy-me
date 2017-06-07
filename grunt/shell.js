@@ -21,6 +21,7 @@ module.exports = {
     command: [
       'git branch -D gh-pages || echo "so not removed"',
       'git checkout --orphan gh-pages',
+      'git push origin gh-pages',
       'git rm --cached \'*\'',
       'ember build --environment=production'
     ].join(' && ')
@@ -33,7 +34,6 @@ module.exports = {
   },
   'deploy-publish': {
     command: [
-     'git push origin gh-pages',
      'git push origin :gh-pages',
      'git subtree push --prefix dist origin gh-pages',
      'git clean -x -d --force --exclude=node_modules',
