@@ -33,6 +33,7 @@ module.exports = {
   },
   'deploy-publish': {
     command: [
+     'git push origin gh-pages',
      'git push origin :gh-pages',
      'git subtree push --prefix dist origin gh-pages',
      'git clean -x -d --force --exclude=node_modules',
