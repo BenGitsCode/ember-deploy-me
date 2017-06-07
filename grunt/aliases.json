@@ -8,7 +8,6 @@
     "shell:deploy-prepare",
     "shell:deploy-dist",
     "shell:deploy-publish",
-    "shell:deploy"
   ],
   "reformat": ["jscs:write"]
 }
