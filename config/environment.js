@@ -51,6 +51,8 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/ember-shipit';
     ENV.locationType = 'hash';
+    ENV.apiHost = '://shielded-basin-88255.herokuapp.com/'
+}'
   }
 
   return ENV;
