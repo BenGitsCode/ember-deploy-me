@@ -35,6 +35,11 @@ module.exports = {
     command: [
       'git push origin :gh-pages || echo "so not removed"',
       'git subtree push --prefix dist origin gh-pages',
+      'echo "deployment successful"'
+    ].join(' && ')
+  },
+  'deploy-clean': {
+    command: [
       'git clean -x -d --force --exclude=node_modules --exclude=bower_components',
       'git checkout master'
     ].join(' && ')
